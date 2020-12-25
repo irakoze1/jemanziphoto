@@ -1,0 +1,25 @@
+{
+  "name": "photographyv2",
+  "version": "1.0.0",
+  "description": "Back End Style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Frank Hakiza",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongodb-session": "^2.4.1",
+    "ejs": "^3.1.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.17",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.16",
+    "nodemailer-mailgun-transport": "^2.0.2",
+    "passport-local": "^1.0.0"
+  }
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">JJPIC</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#Home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#About" onclick="toggleMenu();">About</a></li>
+            <li><a href="#Service" onclick="toggleMenu();">Service</a></li>
+            <li><a href="#Work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#gallery" onclick="toggleMenu();">Gallery</a></li>
+            <li><a href="#Testmonial" onclick="toggleMenu();">Testmonial</a></li>
+            <li><a href="#Contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="Home">
+        <div class="textbx">
+            <h2>Hello, I'm <br> <span>Jean Edmon Manzi.</span></h2>
+            <h3>I’m a Photographer</h3>
+            <a href="#About" class="btn">About Me</a>
+        </div>
+    </section>
+    <section class="about" id="About">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+        <div class="contentBx w50s">
+            <h3>I’m a Photographer</h3>
+            <p>
+                The world without photography will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My photos are inspired by light, color, creative perspective, techniques & personalities.
+            </p>
+        </div>
+        <div class="w50">
+            <img src="img/img1.jpg" class="img">
+        </div>
+        </div>
+    </section>
+    <section class="services" id="Service">
+        <div class="heading white">
+            <h2>Our Services</h2>
+            <p>
+                The world without photography will be meaningless to us if there is no light and color.
+            </p>
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <img src="img/icon1.png">
+                <h2>Designer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="img/icon2.png">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="img/icon3.png">
+                <h2>Andrid App</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="img/icon4.png">
+                <h2>Photography</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="img/icon5.png">
+                <h2>Content Writting</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="img/icon6.png">
+                <h2>Video Editing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate earum provident.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work" id="Work">
+        <div class="heading">
+            <h2>Our Latest Product</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="img/product1.jpg">
+            </div>
+            <div class="workBx">
+                <img src="img/product2.jpg">
+            </div>
+            <div class="workBx">
+                <img src="img/product3.jpg">
+            </div>
+            <div class="workBx">
+                <img src="img/product4.jpg">
+            </div>
+            <div class="heading">
+                <a href="#gallery" class="btn" >View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="heading">
+            <h2>Our Gallery Pictures</h2>
+               <!----------------- Add Image ----------->
+        <% if (admin){ %>
+            <form method="POST" action="/upload" enctype="multipart/form-data" id="AddImage"> 
+                <span id="addFile-btn">Add Image</span>
+                <select id="Gallery" name="choose" class="input-style">
+                  <option value="Mobile">Mobile</option>
+                  <option value="Camera">Camera</option>
+                  <option value="Headphone">Headphone</option>
+                  <option value="Watch">Watch</option>
+                  <option value="Shoe">Shoe</option>
+                  <option value="Headphone">Headphone</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Dowry">Dowry</option>
+                  <option value="Fashion">Fashion</option>
+                  <option value="Lifestyle">Lifestyle</option>
+                  <option value="Studio">Studio</option>
+                </select>
+                  <input type="submit" name="btn_upload_profile_pic" value="Upload" class="fileSubmit input-style" /> 
+               </form>
+        <% } %>
+            <!--x-------------- Add Image -----------x-->
+        </div>
+        <ul>
+            <li class="list active" id="All">All</li>
+            <li class="list" id="Mobile">Mobile</li>
+            <li class="list" id="Camera">Camera</li>
+            <li class="list" id="Watch">Watch</li>
+            <li class="list" id="Shoe">Shoe</li>
+            <li class="list" id="Headphone">Headphone</li>
+            <li class="list" id="Wedding">Wedding</li>
+            <li class="list" id="Dowry">Dowry</li>
+            <li class="list" id="Fashion">Fashion</li>
+            <li class="list" id="Lifestyle">Lifestyle</li>
+            <li class="list" id="Studio">Studio</li>
+        </ul>
+    
+            <!-- <div class="product">
+
+                <% result.forEach( pic => { %>
+
+                    <div class="itemBox <%= pic.gallery %>">
+                        <img src="<%= pic.path %>" class="galleryImg">
+                        <img src="img/recycle-bin.jpg" data-doc="<%= pic._id %>" id="delBtn">
+                    </div>
+
+                <% }) %>
+
+            </div> -->
+            <% let numberOfImg = result.length - 1 %>
+            <% let length = 4 %>
+            <% let i = 0 %>
+            <% let j = 0 %>
+            <% let PageNmbr = 0  %>
+            <% let frank = 1 %>
+
+            <% while(numberOfImg > 0){ %>
+            <div class="productSection" id="productSct<%= frank %>">
+                <div class="product pagination">
+         
+                    <% frank++ %>
+                    <% if(numberOfImg < 4){ %>
+                        <% length = numberOfImg %>
+                    <% } %>
+
+                    <% j = 0 %>
+
+                    <% while(j < length) { %>
+                        <div class="itemBox <%= result[i].gallery %>">
+                            <img src="<%= result[i].path %>" class="galleryImg">
+                            <% if(admin){ %>
+                                <img src="img/recycle-bin.jpg" data-doc="<%= result[i]._id %>" id="delBtn">
+                            <% } %>
+                        </div>
+ 
+                        <% i++ %>
+                        <% j++ %>
+                         
+                    <%  } %>
+                </div>
+            </div>
+                <% numberOfImg -= 4 %>
+                <% PageNmbr++ %>
+            <% } %>
+
+            <div class="pgContent">
+                <div class="pgBox">
+                   <!--<span id="minArrow">≪</span>-->
+
+                    <% for(i=1; i<=PageNmbr; i++){ %>
+                        <span data-boxnmbr="<%= i %>" class="boxNmbr"><%= i %></span> 
+                    <% }  %>
+
+                    <!--<span id="maxArrow">≫</span>-->
+                </div>
+            </div>
+       
+    </section>
+    
+    <section class="testmonial" id="Testmonial">
+        <div class="heading">
+            <h2>Testmonial</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="testmonialBx">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure magnam nemo repudiandae accusantium doloremque quod perspiciatis a laborum. Omnis iure a accusantium autem provident aperiam neque cupiditate totam libero?
+                </p>
+                <h3>Someone Famous <br><span>Creative Designer</span></h3>
+            </div>
+            <div class="testmonialBx">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure magnam nemo repudiandae accusantium doloremque quod perspiciatis a laborum. Omnis iure a accusantium autem provident aperiam neque cupiditate totam libero?
+                </p>
+                <h3>Someone Famous <br><span>Creative Designer</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="Contact">
+        <div class="heading white">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>23 Avenue Nzero,<br>Gihosha Gikungu-Rural <br>67527</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+257 68724498</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>irth@biu.bi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form action="/email" method="POST">
+                    <h3>Message Me</h3>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <!-----------------------Image Full Screen------------------------->
+        <div class="fullScreenImgBody">
+            <div class="alignImgCenter">
+                <img src="" alt="">
+                <button class="closeFullScreen"><i class="fa fa-window-close"></i></button>
+                <div class="arrowsBody">
+                    <span class="arrow" id="Larrow"><i class="fa fa-chevron-circle-left"></i></span>
+                    <span class="arrow" id="Rarrow"><i class="fa fa-chevron-circle-right"></i></span>
+                </div>
+            </div>
+        </div>
+        <!----------x-------------Image Full Screen-------------x------------>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright @2020 TiTiToF. All Right Reserved</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
