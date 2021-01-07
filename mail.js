@@ -3,8 +3,8 @@ const mailgun = require('nodemailer-mailgun-transport');
 
 const auth = {
     auth:{
-        api_key: '77aaa712ee1948a087ab2aee07bf13a5-95f6ca46-197b7b09',
-        domain: 'sandboxc3bd0909fcde483ca0a0dfe788ba5530.mailgun.org'
+        api_key: '7ef457377564c6fca26cbb3e0bba6e52-95f6ca46-cb976616',
+        domain: 'sandboxeefbe64c44084ac0befdd1f170b6ef82.mailgun.org'
     }
 };
 
@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport(mailgun(auth));
 const sendEmail = function(email, subject, message){
     const mailOptins = {
         from: email,
-        to : 'frankgangihakil17@gmail.com',
+        to : 'irth@biu.bi',
         subject: subject,
         text: message
     };
